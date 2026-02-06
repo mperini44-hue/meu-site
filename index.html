@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site Pessoal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* FUNDO NOVO */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1); /* gradiente moderno */
+      color: #333;
+      line-height: 1.6;
+      animation: fadeBody 1.5s ease;
+    }
+
+    @keyframes fadeBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: rgba(102, 126, 234, 0.8); /* semi-transparente sobre o gradiente */
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 0 0 20px 20px;
+      animation: slideDown 1.2s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid white;
+      transition: transform 0.4s;
+    }
+
+    header img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    nav {
+      background: rgba(51, 51, 51, 0.9);
+      padding: 10px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+      border-radius: 0 0 10px 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9a9e;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.9); /* deixa o fundo transparente suave */
+      border-radius: 15px;
+      animation: fadeUp 1.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #667eea;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 14px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .skills span:hover {
+      transform: scale(1.1);
+      background: #5563d6;
+    }
+
+    button {
+      background: #ff9a9e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    #mensagem {
+      margin-top: 15px;
+      font-weight: bold;
+      animation: fadeIn 1s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(51, 51, 51, 0.9);
+      color: white;
+      margin-top: 40px;
+      border-radius: 10px 10px 0 0;
+      animation: fadeIn 2s ease;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Minha foto">
+    <h1>Murilo Perini</h1>
+    <p>Meu site pessoal</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#video">Vídeo</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>
+      Olá! Esse é meu site pessoal 😄  
+      Aqui eu falo um pouco sobre mim.
+    </p>
+    <button onclick="mensagem()">Clique aqui</button>
+    <p id="mensagem"></p>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <span>FOCO</span>
+      <span>TENTAR</span>
+      <span>LUTAR</span>
+      <span>APRENDER</span>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Meu Vídeo Favorito</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/_tOBF8K74yI?list=RDwxLE0V9EFqg" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contato" style="
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+">
+  <h2 style="
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 28px;
+  ">Contato</h2>
+  
+  <p style="
+      font-size: 18px;
+      margin-bottom: 10px;
+  ">
+    📧 Email: <a href="mailto:mperini44@email.com" style="color:#ff9a9e; text-decoration:none;">mperini44@email
+
+
+
+  <footer>
+    <p>© 2026 - Meu Site Pessoal</p>
+  </footer>
+
+  <script>
+    function mensagem() {
+      const msg = document.getElementById("mensagem");
+      msg.innerHTML = "EU TE AMO MUITO GIH 💙<br>Você me dá alegria todos os dias!";
+      msg.style.animation = "fadeIn 1s ease";
+    }
+  </script>
+
+</body>
+</html>
