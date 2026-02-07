@@ -2,205 +2,38 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site Pessoal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Meu Site Simples</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #f1f1f1;
-      line-height: 1.6;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    header {
-      background: #111;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-      border-radius: 0 0 25px 25px;
-    }
-
-    /* FOTO GRANDE NO TOPO */
-    header img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 25px;
-      border: 5px solid #fff;
-      box-shadow: 0 0 35px rgba(255,255,255,0.35);
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
-
-    header img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 50px rgba(255,255,255,0.5);
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 14px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 35px auto;
-      padding: 30px;
-      background: #111;
-      border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(255,255,255,0.08);
-    }
-
-    section {
-      margin-bottom: 45px;
-      border-bottom: 1px solid #222;
-      padding-bottom: 35px;
-    }
-
-    h2 {
-      color: #fff;
-      margin-bottom: 15px;
+      text-align: center;
+      color: #333;
     }
 
     p {
-      color: #ccc;
-    }
-
-    footer {
       text-align: center;
-      padding: 25px;
-      color: #aaa;
-      font-size: 14px;
+      color: #666;
     }
-  </style>
-</head>
 
-<body>
-
-  <!-- HEADER CORRETO -->
-  <header>
-    <!-- FOTO NO TOPO -->
-    <img src="https://i.ibb.co/4gWQCMZG/eu3.jpg" alt="Minha Foto">
-
-    <h1>Murilo Perini</h1>
-    <p>Descrição curta ou frase de impacto</p>
-
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#video">Vídeo</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>
-        Aqui você escreve quem você é, o que faz ou o que quer apresentar no seu site.
-      </p>
-    </section>
-
-    <!-- VÍDEO -->
-    <section id="video">
-      <h2>Meu Vídeo</h2>
-
-      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:20px;">
-        <iframe
-          src="https://www.youtube.com/embed/wxLE0V9EFqg"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          style="position:absolute; top:0; left:0; width:100%; height:100%;">
-        </iframe>
-      </div>
-    </section>
-
-    <!-- GALERIA -->
-    <section id="galeria">
-      <h2>Galeria</h2>
-
-      <div style="display:flex; justify-content:center;">
-        <a href="https://ibb.co/4gWQCMZG" target="_blank">
-          <img
-            src="https://i.ibb.co/4gWQCMZG/eu3.jpg"
-            alt="eu3"
-            style="
-              width:300px;
-              height:300px;
-              object-fit:cover;
-              border-radius:20px;
-              box-shadow:0 10px 30px rgba(0,0,0,0.7);
-              transition:transform 0.4s;
-            "
-            onmouseover="this.style.transform='scale(1.08)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-        </a>
-      </div>
-    </section>
-
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>
-        Email: mperini44@email.com<br>
-        WhatsApp: (11) 95637-5670
-      </p>
-    </section>
-
-  </main>
-
-  <footer>
-    © 2026 - Murilo. Todos os direitos reservados.
-  </footer>
-
-</body>
-</html>
-# Programa de cadastro simples
-
-print("=== Bem-vindo ao Sistema de Cadastro ===\n")
-
-# Entradas de dados do usuário
-nome = input("Digite seu nome: ")
-idade = input("Digite sua idade: ")
-telefone = input("Digite seu número de telefone: ")
-cidade = input("Digite sua cidade: ")
-
-# Processamento (opcional, aqui só vamos organizar a saída)
-# Por exemplo, podemos criar uma mensagem personalizada
-mensagem = f"""
-Olá, {nome}!
-Aqui estão os seus dados cadastrados:
-- Idade: {idade} anos
-- Telefone: {telefone}
-- Cidade: {cidade}
-
-Obrigado por se cadastrar!
-"""
-
-# Saída de dados
-print(mensagem)
+    input[type="text"], input[type="number"], input[type="tel"] {
+      width:
